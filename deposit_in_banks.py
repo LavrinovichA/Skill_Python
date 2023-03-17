@@ -1,6 +1,6 @@
 money = float(input('Введите сумму, которую планируете положить под проценты\n'))
 per_cent = {'ТКБ': 5.6, 'СКБ': 5.9, 'ВТБ': 4.28, 'СБЕР': 4.0}
-deposit = [x * money for x in per_cent.values()]
+deposit = [round((x * money)/100, 3) for x in per_cent.values()]
 print(deposit) #Вывод по заданию
 
 print(dict(zip(per_cent.keys(), deposit))) #Вывод депозитов по банкам (более читаемо)
